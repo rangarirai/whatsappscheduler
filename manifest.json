@@ -1,0 +1,22 @@
+{
+  "name": "whatsapp scheduler",
+  "description": "whatsapp scheduler",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "permissions": ["storage", "tabs", "activeTab", "nativeMessaging", "alarms"],
+  "options_page": "options.html",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://web.whatsapp.com/"],
+      "js": ["contentScript.js"]
+    }
+  ]
+}

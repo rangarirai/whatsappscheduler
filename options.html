@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Schedule messages</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <style>
+      /* .gap > * {
+        margin: 6px;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="columns">
+      <div class="column is-three-fifths">
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            margin: auto;
+            margin-top: 20px;
+          "
+        >
+          <div class="field">
+            <p class="title is-3">Schedule Message Form</p>
+          </div>
+          <div class="field">
+            <input
+              type="text"
+              class="input is-link"
+              placeholder="enter contact name"
+              id="contact"
+            />
+          </div>
+          <div class="field">
+            <textarea
+              class="textarea"
+              placeholder="enter message"
+              id="message"
+            ></textarea>
+          </div>
+          <div class="field">
+            <input class="input is-link" type="datetime-local" id="dateTime" />
+          </div>
+
+          <button id="send" class="button is-link">Schedule message</button>
+        </div>
+      </div>
+      <div class="column">
+        <div
+          style="
+            /* display: flex;
+            flex-direction: column; */
+            width: 80%;
+            margin: auto;
+            margin-top: 20px;
+          "
+        >
+          <div class="field">
+            <p class="title is-3">Scheduled Messages</p>
+          </div>
+          <div
+            class="list"
+            id="msgList"
+            style="height: 75vh; overflow-y: auto"
+          ></div>
+        </div>
+      </div>
+    </div>
+    <script src="options.js"></script>
+  </body>
+</html>
